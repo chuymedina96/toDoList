@@ -1,11 +1,14 @@
 body {
 	text-align:center;
-	margin: 0 auto;
 	background: #00E6FF;
 }
 #container{
-	background-color: teal;
-	width: 360px;
+	background-color: #fff;
+	width: 500px;
 	text-align: center;
 	margin: 0 auto;
+}
+.completed{
+	color: black;
+	text-decoration: line-through;
 }

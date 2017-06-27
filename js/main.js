@@ -8,7 +8,18 @@ $(".toggle-btn").click(function() {
 	$("div").slideToggle(2000);
 	$("div").css(styles);
 });
-$("li").on("click", function() {
-	$(this).css("text-decoration", "line-through");
+$("li").click(function() {
+	$(this).toggleClass("completed");
+});
+$(".x").on("click", function(event) {
+	$(this).parent().fadeOut(500, function() {
+		$(this).remove();
+	});
+	event.stopPropagation();
+});
+$("input[type='text'").keypress(function(event) {
+	if(event.which === 13) {
+		alert("you pressed enter!");
+	}
 });
 
