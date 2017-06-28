@@ -12,3 +12,13 @@ body {
 	color: black;
 	text-decoration: line-through;
 }
+ul {
+	list-style: none;
+}
+.x {
+	float: left;
+}
+.x:hover{
+	color: red;
+	
+}

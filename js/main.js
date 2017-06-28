@@ -12,6 +12,7 @@ $("li").click(function() {
 	$(this).toggleClass("completed");
 });
 $(".x").on("click", function(event) {
+	var sure = alert("Are you sure you want to delete this?");
 	$(this).parent().fadeOut(500, function() {
 		$(this).remove();
 	});
@@ -19,7 +20,11 @@ $(".x").on("click", function(event) {
 });
 $("input[type='text'").keypress(function(event) {
 	if(event.which === 13) {
-		alert("you pressed enter!");
+		var input =$(this).val();
+		$(this).val("");
+		console.log(input);
+		$("ul").append("<li>" + ("<span class='x'>X</span> ") + input + "</li>");
+
 	}
 });
 
